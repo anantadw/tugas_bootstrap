@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Product | Checkout</title>
+        <link rel="stylesheet" href="../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body class="bodytop">
+        
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top solid">
+            <div class="container">
+                <!-- brand -->
+                <a class="navbar-brand a logo" href="#">Your`niture</a>
+        
+                <!-- toggler / collapsible button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link a" href="home.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link a act" href="product.html">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link a" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link a" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- end of navbar -->
+
+        <!-- checkout -->
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2>Checkout Form</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row p-5 mb-5 bg-light">
+                <div class="col-md-12 text-center">
+                    <h4>Billing Address</h4>
+                    <div class="row mt-5 justify-content-center text-left">
+                        <div class="col-md-6">
+                            <form action="">
+                                <label for="Product">Your Product</label>
+                                <div class="input-group mb-4">
+                                    <input type="text" class="form-control" id="Product" value="" disabled>
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-secondary rounded-right" data-toggle="modal" data-target="#change">Change</button>
+                                    </div>
+
+                                    <div class="modal fade" id="change" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Product Change</h5>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Are you sure want to change your product?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                                                    <a href="product.html" class="btn btn-secondary">Yes</a> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label for="Price">Price</label>
+                                <div class="input-group mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Rp</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="Price" value="" disabled>
+                                </div>
+                                
+
+                                <label for="Fullname">Fullname</label>
+                                <input type="text" class="form-control mb-3" id="Fullname" maxlength="50" required>
+
+                                <label for="Email">Email <span class="text-muted">(Required)</span> </label>
+                                <div class="input-group mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                    </div>
+                                    <input type="email" class="form-control" id="Email" placeholder="your-valid-email@example.com" onfocus="this.placeholder=''" onblur="this.placeholder='your-valid-email@example.com'" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Your Email is required.
+                                    </div>
+                                </div>
+
+                                <label for="Phone">Phone <span class="text-muted">(Optional)</span> </label>
+                                <div class="input-group mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-phone"></i>+62</span>
+                                        <!-- <select class="input-group-text custom-select" id="phoneId" required="">
+                                            <option value="">...</option>
+                                            <option>+62</option>
+                                        </select> -->
+                                    </div>
+                                    <input type="text" class="form-control" id="Phone" placeholder="8775995xxxx" onfocus="this.placeholder=''" onblur="this.placeholder='87759xxxxxx'">
+                                </div>
+
+                                <div class="row mb-1">
+                                    <div class="col-md-5 mb-4">
+                                        <label for="Province">Province</label>
+                                        <select class="custom-select d-block w-100" id="Province" required="">
+                                            <option value="">Choose...</option>
+                                            <option>Jawa Barat</option>
+                                            <option>Jawa Tengah</option>
+                                            <option>Jawa Timur</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 mb-4">
+                                        <label for="City">City</label>
+                                        <select class="custom-select d-block w-100" id="City" required="">
+                                            <option value="">Choose...</option>
+                                            <option>Bandung</option>
+                                            <option>Cimahi</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 mb-4">
+                                        <label for="Zip">Zip</label>
+                                        <input type="text" class="form-control" id="Zip" placeholder="" required="" maxlength="5">
+                                    </div>
+                                </div>
+
+                                <label for="Adderss">Address</label><br>
+                                <textarea class="form-control" id="Address" rows="6"></textarea>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of checkout -->
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4>Address</h4>
+                        <a href="#">Pinus Street - 7</a>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Follow Us</h4>
+                        <a href="#"><i class="fa fa-facebook-square fa-lg"></i></a>
+                        <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square fa-lg"></i></a>
+                        <a href="#"><i class="fa fa-google fal-lg"></i></a>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Contact</h4>
+                        <a href="#">+62 877-0896-3714</a><br>
+                        <a href="#">your.niture@company.inc</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="end">
+            <div class="container text-center">
+                <h6>&copy; Copyright Your`niture 2019. All Rights Reserved.</h6>
+            </div>
+        </div>
+        <!-- end of footer -->
+    
+        <script src="../assets/js/jquery.js"></script>
+        <script src="../assets/js/popper.js"></script>
+        <script src="../assets/js/bootstrap.js"></script>
+        <script src="../assets/js/script.js"></script>
+        <script>
+            document.getElementById('Product').value = localStorage.getItem('nameValue');
+            document.getElementById('Price').value = localStorage.getItem('priceValue');
+        </script>
+    </body>
+</html>
